@@ -4,7 +4,7 @@ import (
     "io"
     "log"
     "net/http"
-    "github.com/tidwall/gjson"
+    //"github.com/tidwall/gjson"
 )
 
 const json = `{
@@ -19,8 +19,8 @@ const json = `{
   ]
 }`
 func helloHandler(w http.ResponseWriter, r *http.Request) {
-    result := gjson.Get(json, "friends")
-    io.WriteString(w, result.String())
+    //result := gjson.Get(json, "friends")
+    io.WriteString(w, json)
     //result.ForEach(func(key, value gjson.Result) bool {
     //    println(value.String())
     //    return true // keep iterating
