@@ -6,7 +6,6 @@ import (
     "net/http"
     //"github.com/tidwall/gjson"
 )
-
 const json = `{
   "name": {"first": "Tom", "last": "Anderson"},
   "age":37,
@@ -18,6 +17,7 @@ const json = `{
     {"first": "Jane", "last": "Murphy", "age": 47}
   ]
 }`
+
 func helloHandler(w http.ResponseWriter, r *http.Request) {
     //result := gjson.Get(json, "friends")
     io.WriteString(w, json)
